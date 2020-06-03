@@ -3,6 +3,8 @@
 node_modules/
 dist/
 
+auth.json
+
 src/*data/
 src/index.html
 
