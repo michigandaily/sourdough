@@ -52,15 +52,18 @@ div.by {
   color: #0009;
   font-size: 0.8rem;
 
-  span:last-of-type::before {
+  span.author:last-of-type::before {
     content: " and ";
   }
-  span:nth-of-type(1)::after,
-  span:last-of-type::after {
+  span.author:nth-of-type(1)::after,
+  span.author:last-of-type::after {
     content: "";
   }
-  span::after {
+  span.author::after {
     content: ", ";
+  }
+  span.author:first-of-type::before {
+    content: "";
   }
 }
 

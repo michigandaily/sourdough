@@ -20,8 +20,9 @@
         <h1>{{ hed }}</h1>
         <div class="by">
             {% for author in by %}
-            <span>{{ author }}</span>
+            <span class="author">{{ author }}</span>
             {% endfor %}
+            <span class="org"> / Daily Data Team</span>
         </div>
         {% for item in body %}
         {% if item.type == "text" %}
