@@ -11,3 +11,4 @@ fetch: src/index.html
 init:
 	rm -rf .git/
 	git init
+	yarn install -D
