@@ -55,7 +55,7 @@ div.by {
   span.author:last-of-type::before {
     content: " and ";
   }
-  span.author:nth-of-type(1)::after,
+  span.author:nth-last-of-type(2)::after,
   span.author:last-of-type::after {
     content: "";
   }
