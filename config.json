@@ -4,5 +4,6 @@
         "template": "./template/index.html",
         "output": "./template/copy.json",
         "apiConfig": "./auth.json"
-    }
+    },
+    "ga_id": "UA-168080597-1"
 }

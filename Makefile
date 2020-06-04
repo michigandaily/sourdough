@@ -23,3 +23,7 @@ dev: auth.json fetch
 build: auth.json fetch
 	rm -rf dist/
 	yarn run build
+
+
+build-prod: export NODE_ENV = production
+build-prod: build
