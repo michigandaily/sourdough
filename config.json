@@ -5,5 +5,7 @@
         "output": "./template/copy.json",
         "apiConfig": "./auth.json"
     },
+    "hostname": "magnify.michigandaily.us",
+    "base_url": "sourdough",
     "ga_id": "UA-168080597-1"
 }

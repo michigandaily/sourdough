@@ -1,7 +1,7 @@
-| Title     | Sourdough                                |
-| :-------- | :--------------------------------------- |
-| Author(s) | [Naitian Zhou](mailto:naitian@umich.edu) |
-| Link      |                                          |
+| Title     | Sourdough                                  |
+| :-------- | :----------------------------------------- |
+| Author(s) | [Naitian Zhou](mailto:naitian@umich.edu)   |
+| Link      | https://michigandaily.github.io/sourdough/ |
 
 # About Sourdough
 
