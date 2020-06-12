@@ -10,6 +10,7 @@
     "htmlparser2": "^4.1.0",
     "nunjucks": "^3.2.1",
     "parcel": "^1.12.4",
+    "parcel-plugin-static-files-copy": "^2.4.3",
     "sass": "^1.26.7"
   },
   "scripts": {
