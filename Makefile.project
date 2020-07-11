@@ -19,7 +19,7 @@ dev: auth.json fetch
 	yarn run dev
 
 build: auth.json fetch
-	rm -rf dist/
+	rm -rf dist/*
 	yarn run build
 
 
