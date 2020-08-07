@@ -45,6 +45,18 @@
         <h3>{{ item.value }}</h3>
         {% elif item.type == "Figure" %}
         <figure class="vis {{ item.value.Name }}">
+            <h3 class="figure__title">{{ item.value.Title }}</h3>
+            <div class="figure__graphic">
+            </div>
+            <div class="figure__caption">
+                {{ item.value.Caption }}
+            </div>
+            <div class="figure__byline by">
+                {% for author in item.value.By %}
+                <span class="author">{{ author }}</span>
+                {% endfor %}
+                / Daily Data Team
+            </div>
         </figure>
         {% elif item.type == "Image" %}
         {% if item.value.Url %}
