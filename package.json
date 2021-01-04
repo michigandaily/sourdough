@@ -27,5 +27,8 @@
       }
     ],
     "watcherGlob": "src/data/*"
+  },
+  "resolutions": {
+    "node-forge": "0.10.0"
   }
 }
