@@ -1,9 +1,11 @@
-| Title     | Sourdough                                  |
-| :-------- | :----------------------------------------- |
-| Author(s) | [Naitian Zhou](mailto:naitian@umich.edu)   |
-| Link      | https://michigandaily.github.io/sourdough/ |
+# sourdough
 
-# About Sourdough
+| Title     | Sourdough                                    |
+| :-------- | :------------------------------------------- |
+| Author(s) | [Naitian Zhou](mailto:naitian@umich.edu)     |
+| Link      | <https://michigandaily.github.io/sourdough/> |
+
+## About Sourdough
 
 Sourdough is the _starter_ (get it?) for data visualizations and stories at the
 Michigan Daily. You can view the repository

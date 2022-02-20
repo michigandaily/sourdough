@@ -1,0 +1,41 @@
+{# Template #}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta property="og:title" content="" data-react-helmet="true" />
+    <meta property="og:description" content="" data-react-helmet="true" />
+    <meta property="og:image" content="" data-react-helmet="true" />
+    <meta property="og:url" content="" data-react-helmet="true" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="description" content="" data-react-helmet="true" />
+    <title>{{ config.hed }}</title>
+    <link
+      rel="stylesheet"
+      href="css/base.scss"
+      type="text/css"
+      charset="utf-8"
+    />
+    <script type="module" src="js/index.js" charset="utf-8"></script>
+    {% if env == "production" %} {% if config.ga_id %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id={{ config.ga_id }}"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "{{ config.ga_id }}");
+    </script>
+    {% endif %} {% endif %}
+  </head>
+
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
