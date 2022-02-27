@@ -1,34 +1,31 @@
 {
   "name": "sourdough",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
-  "devDependencies": {
-    "archieml": "^0.4.2",
-    "googleapis": "^52.0.0",
-    "html-entities": "^1.3.1",
-    "htmlparser2": "^4.1.0",
-    "nunjucks": "^3.2.1",
-    "parcel": "^1.12.4",
-    "parcel-plugin-static-files-copy": "^2.4.3",
-    "sass": "^1.26.7"
-  },
   "scripts": {
-    "fetch-doc": "node scripts/gdoc.js",
-    "render-html": "node scripts/render.js",
-    "build": "yarn run parcel build --public-url ./ src/index.html",
-    "dev": "yarn run parcel src/index.html"
+    "prepare": "husky install",
+    "build": "parcel build --public-url ./ src/index.html",
+    "start": "parcel src/index.html"
   },
-  "staticFiles": {
-    "staticPath": [
-      {
-        "staticPath": "src/data",
-        "staticOutDir": "data"
-      }
-    ],
-    "watcherGlob": "src/data/*"
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.2.1"
   },
-  "resolutions": {
-    "node-forge": "0.10.0"
+  "devDependencies": {
+    "@michigandaily/parcel-transformer-nunjucks": "https://github.com/MichiganDaily/parcel-transformer-nunjucks",
+    "@parcel/transformer-sass": "2.3.2",
+    "@types/react": "^17.0.39",
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^7.0.4",
+    "parcel": "^2.3.2",
+    "prop-types": "^15.8.1",
+    "sink": "https://github.com/MichiganDaily/sink"
   }
 }

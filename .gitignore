@@ -7,7 +7,4 @@ dist/
 
 auth.json
 
-src/*data/
-src/index.html
-
-template/copy.json
+src/data/
