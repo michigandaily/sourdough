@@ -1,7 +1,5 @@
 # sourdough
 
-## About Sourdough
-
 Sourdough is the _starter_ (get it?) for web apps at The Michigan Daily.
 
 It has several useful features:
