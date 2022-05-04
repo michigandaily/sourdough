@@ -60,6 +60,7 @@ Consider the following generalized URL:
 You can import a CSV file in JS like this:
 
 ```js
-import csvfile from "url:../data/data.csv";
-// the "url:" prefix is specific to Parcel 2.
+import csvfile from "../data/data.csv";
 ```
+
+You'll probably need something like [`d3-fetch`](https://github.com/d3/d3-fetch) to read a CSV into something usable.
