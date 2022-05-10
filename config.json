@@ -1,5 +1,7 @@
 {
   "hed": "The Michigan Daily",
+  "dek": "Description",
+  "deployment": "test.michigandaily.com",
   "fetch": [
     {
       "id": "",
