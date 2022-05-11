@@ -16,6 +16,24 @@ Click the green "Use this template" button to create a new instance of the `sour
 
 You can use `yarn start` to start a development server and `yarn build` to build production-ready files into `dist/`.
 
+### Importing images
+
+If you want to import images with variable names, you'll need to use [glob specifiers](https://parceljs.org/features/dependency-resolution/#glob-specifiers) like this:
+
+```javascript
+/* eslint-disable-next-line import/no-unresolved */
+import * as images from "../../img/*.png";
+```
+
+If you want to import images with different extensions, you need not include an extension:
+
+```javascript
+/* eslint-disable-next-line import/no-unresolved, import/extensions */
+import * as images from "../../img/*";
+```
+
+_Though we are importing all images in the above line, we will only end up sending network requests to ones that we use. So, this is not resource inefficient._
+
 ### Fetching from Google Drive
 
 Download our service account credentials file (`auth.json`) and put it in the root of this repository.
