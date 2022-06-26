@@ -1,13 +1,13 @@
 
 
 {
-  "hed": "The tttaaaaaa",
+  "hed": "The Michigan Daily",
   "dek": "Description",
   "deployment": "https://test.michigandaily.com",
   "fetch": [
     {
-      "id": "1llKpV857GJE9yxrnY6DrgYWYACE98ehdyrFarlhkVLs",
-      "output": "./src/data/copy.json",
+      "id": "",
+      "output": "",
       "auth": "./auth.json"
     },
     {
