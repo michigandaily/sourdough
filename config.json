@@ -1,0 +1,21 @@
+
+
+{
+  "hed": "The tttaaaaaa",
+  "dek": "Description",
+  "deployment": "https://test.michigandaily.com",
+  "fetch": [
+    {
+      "id": "1llKpV857GJE9yxrnY6DrgYWYACE98ehdyrFarlhkVLs",
+      "output": "./src/data/copy.json",
+      "auth": "./auth.json"
+    },
+    {
+      "id": "",
+      "sheetId": "0",
+      "output": "",
+      "auth": "./auth.json"
+    }
+  ],
+  "GA_MEASUREMENT_ID": ""
+}
