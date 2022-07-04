@@ -36,6 +36,8 @@ const Component = ({ image }) => (
 )
 ```
 
+That said, you'll probably want to be importing images by using a CDN (e.g. Jetpack).
+
 ### Fetching from Google Drive
 
 Download our service account credentials file (`auth.json`) and put it in the root of this repository.
