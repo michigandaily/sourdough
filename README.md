@@ -85,4 +85,4 @@ You can import a CSV file in JS like this:
 import csvfile from "../data/data.csv";
 ```
 
-You'll probably need something like [`d3-fetch`](https://github.com/d3/d3-fetch) to read a CSV into something usable.
+We use the `@rollup/plugin-dsv` plugin (which relies on [`d3-dsv`](https://github.com/d3/d3-dsv)) to parse the CSV file into a usable array.
