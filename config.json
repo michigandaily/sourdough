@@ -1,7 +1,7 @@
 {
   "hed": "The Michigan Daily",
   "dek": "Description",
-  "deployment": "test.michigandaily.com",
+  "deployment": "https://test.michigandaily.com",
   "fetch": [
     {
       "id": "",
@@ -15,5 +15,5 @@
       "auth": "./auth.json"
     }
   ],
-  "ga_id": "UA-168080597-1"
+  "GA_MEASUREMENT_ID": ""
 }

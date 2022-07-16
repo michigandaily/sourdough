@@ -7,32 +7,36 @@ It has several useful features:
 - [x] React as a dependency by default
 - [x] MicroCMS with [ArchieML](http://archieml.org/)
 - [x] Data ingest from Google Sheets
-- [x] Bundling with Parcel
+- [x] Bundling with [Vite](https://vitejs.dev/)
 - [ ] Easy deploy to S3 bucket
 
 ## Using this template
 
 Click the green "Use this template" button to create a new instance of the `sourdough` template. Then, clone the new instance and run `yarn install` to initialize the project.
 
-You can use `yarn start` to start a development server and `yarn build` to build production-ready files into `dist/`.
+You can use `yarn dev` to start a development server and `yarn build` to build production-ready files into `dist/`.
 
 ### Importing images
 
-If you want to import images with variable names, you'll need to use [glob specifiers](https://parceljs.org/features/dependency-resolution/#glob-specifiers) like this:
+If you want to import an image with a static name, you can simply import it:
 
 ```javascript
-/* eslint-disable-next-line import/no-unresolved */
-import * as images from "../../img/*.png";
+import photo from "../assets/photo.jpg";
+
+const Component = () => (
+  <img src={photo} alt="Alternative text" />
+)
 ```
 
-If you want to import images with different extensions, you need not include an extension:
+If you want to import images with variable names, you'll need to use a [URL constructor](https://developer.mozilla.org/en-US/docs/Web/API/URL) and [`import.meta.url`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import.meta):
 
 ```javascript
-/* eslint-disable-next-line import/no-unresolved, import/extensions */
-import * as images from "../../img/*";
+const Component = ({ image }) => (
+  <img src={new URL(image, import.meta.url).href} alt="Alternative text" />
+)
 ```
 
-_Though we are importing all images in the above line, we will only end up sending network requests to ones that we use. So, this is not resource inefficient._
+That said, you'll probably want to be importing images by using a CDN (e.g. Jetpack).
 
 ### Fetching from Google Drive
 
@@ -81,4 +85,4 @@ You can import a CSV file in JS like this:
 import csvfile from "../data/data.csv";
 ```
 
-You'll probably need something like [`d3-fetch`](https://github.com/d3/d3-fetch) to read a CSV into something usable.
+We use the `@rollup/plugin-dsv` plugin (which relies on [`d3-dsv`](https://github.com/d3/d3-dsv)) to parse the CSV file into a usable array.

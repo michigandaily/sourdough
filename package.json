@@ -1,34 +1,33 @@
 {
   "name": "sourdough",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "license": "MIT",
   "scripts": {
     "prepare": "husky install",
-    "clean": "rm -rf dist/* && rm -rf .parcel-cache",
-    "build": "yarn clean && parcel build --public-url ./ src/index.html",
-    "start": "yarn clean && parcel src/index.html"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "prop-types": "^15.8.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-router-dom": "^6.2.2"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@michigandaily/parcel-transformer-nunjucks": "https://github.com/MichiganDaily/parcel-transformer-nunjucks",
-    "@parcel/resolver-glob": "~2.6.0",
-    "@parcel/transformer-raw": "~2.6.0",
-    "@parcel/transformer-sass": "~2.6.0",
-    "@types/react": "^17.0.43",
-    "eslint": "^8.12.0",
+    "@rollup/plugin-dsv": "^2.0.3",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "2.0.0",
+    "eslint": "^8.18.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.29.4",
-    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.0",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^7.0.4",
-    "parcel": "~2.6.0",
-    "sink": "https://github.com/MichiganDaily/sink"
+    "nunjucks": "^3.2.3",
+    "sass": "^1.53.0",
+    "sink": "https://github.com/MichiganDaily/sink",
+    "vite": "^3.0.0"
   }
 }
