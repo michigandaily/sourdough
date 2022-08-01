@@ -1,6 +1,7 @@
 {
   "hed": "The Michigan Daily",
   "dek": "Description",
+  "social_img": "",
   "deployment": "https://test.michigandaily.com",
   "fetch": [
     {
