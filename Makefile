@@ -6,6 +6,7 @@ deploy:
 		echo ⚠️Please set the AWS S3 destination \(bucket\) in config.json; \
 	else \
 		brew install awscli; \
+		aws s3 rm ${BUCKET} --recursive
 		aws s3 cp dist ${BUCKET}; \
 	fi
 
