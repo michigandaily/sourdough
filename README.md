@@ -8,7 +8,7 @@ It has several useful features:
 - [x] MicroCMS with [ArchieML](http://archieml.org/)
 - [x] Data ingest from Google Sheets
 - [x] Bundling with [Vite](https://vitejs.dev/)
-- [ ] Easy deploy to S3 bucket
+- [x] Easy deploy to S3 bucket
 
 ## Using this template
 
