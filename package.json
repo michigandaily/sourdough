@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "prepare": "husky install",
+    "lint": "eslint src --ext=js,jsx,ts,tsx --fix",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
