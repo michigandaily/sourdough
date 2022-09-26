@@ -50,7 +50,7 @@ An object must have `id`, `output`, and `auth` properties in order to query for 
 
 The `auth` property of each object is the name of the credentials file. Since `auth` is a property of each object instead of the entire configuration file, we are able to fetch files that come from locations that may require different permissions.
 
-You may fetch as few or as many files as you want.
+You may fetch as few or as many files as you want. The following sections will guide you in filling out the `config.json` file to fetch for Google Documents, Google Sheets, and raw JSON files. In order to fetch all files (regardless of type), run `yarn run sink fetch`.
 
 #### Fetching JSON from a Google Doc
 
@@ -86,3 +86,20 @@ import csvfile from "../data/data.csv";
 ```
 
 We use the `@rollup/plugin-dsv` plugin (which relies on [`d3-dsv`](https://github.com/d3/d3-dsv)) to parse the CSV file into a usable array.
+
+#### Fetching a JSON file from Google Drive
+
+Google Drive can store raw JSON files. You can get the URL of a JSON file stored in Google Drive by clicking "Get link" in the context menu and then clicking the "Copy link" button from the popup. That will put the following generalized URL into your clipboard:
+
+`https://drive.google.com/file/d/FILE_ID/view?usp=sharing`
+
+1. In `config.json`, put `FILE_ID` in `id`.
+2. Specify `type` as `json`.
+3. Put a path where the JSON-ified AML should go in `output`. This path should probably be somewhere in `src/graphic`.
+4. Run `yarn run sink json` to fetch the specified JSON file.
+
+You can import a JSON file in JS like this:
+
+```js
+import copy from "../data/data.json";
+```
