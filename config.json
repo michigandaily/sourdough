@@ -2,7 +2,6 @@
   "hed": "The Michigan Daily",
   "dek": "Description",
   "social_img": "",
-  "deployment": "https://test.michigandaily.com",
   "fetch": [
     {
       "type": "doc",
@@ -24,5 +23,14 @@
       "auth": "~/.daily-google-services.json"
     }
   ],
-  "GA_MEASUREMENT_ID": ""
+  "GA_MEASUREMENT_ID": "",
+  "deployment": {
+    "url": "https://test.michigandaily.com",
+    "region": "us-east-2",
+    "distribution": "",
+    "bucket": "test.michigandaily.com",
+    "key": "",
+    "build": "./dist",
+    "profile": "sink"
+  }
 }
