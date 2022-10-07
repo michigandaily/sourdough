@@ -55,3 +55,9 @@ import csvfile from "../data/data.csv";
 ```
 
 We use the `@rollup/plugin-dsv` plugin (which relies on [`d3-dsv`](https://github.com/d3/d3-dsv)) to parse the CSV file into a usable array.
+
+### Deploying to AWS S3
+
+Refer to the [AWS S3 deployment with cache invalidation](https://github.com/MichiganDaily/sink/tree/main#aws-s3-deployment-with-cache-invalidation) section in the `sink` README for instructions on how to set up `config.json` for deploying to AWS S3.
+
+Make sure that `base` in `vite.config.js` is routed correctly (it should probably be `config.key`. Run `yarn sink deploy aws`.
