@@ -1,6 +1,6 @@
 import { configure, renderString } from "nunjucks";
-import { existsSync, readFileSync } from "fs";
-import { basename } from "path";
+import { existsSync, readFileSync } from "node:fs";
+import { basename, extname } from "node:path";
 
 export default () => ({
   name: "vite-plugin-transform-nunjucks",
@@ -11,7 +11,7 @@ export default () => ({
       const archie = Object.fromEntries(
         await Promise.all(
           config.fetch.filter(
-            aml => !Object.hasOwn(aml, "sheetId")
+            aml => extname(aml.output) === ".json"
               && aml.id.length > 0
               && aml.output.length > 0
               && existsSync(new URL(aml.output, import.meta.url))
