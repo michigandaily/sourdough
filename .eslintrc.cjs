@@ -30,4 +30,9 @@ module.exports = {
     eqeqeq: "error",
     "prettier/prettier": "error",
   },
+  settings: {
+    react: {
+      version: "detect",
+    },
+  },
 };
