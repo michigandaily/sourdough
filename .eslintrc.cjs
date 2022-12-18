@@ -2,56 +2,32 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    node: true,
   },
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
-    'airbnb/hooks',
-    'prettier',
-  ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 'latest',
-    sourceType: 'module',
+    ecmaVersion: "latest",
+    sourceType: "module",
   },
-  plugins: [
-    'react',
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended",
   ],
-  globals: {
-    JSX: true,
-  },
+  plugins: ["prettier"],
   rules: {
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        js: 'never',
-        jsx: 'never',
-      },
-    ],
-    'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.js'] }],
-    'no-use-before-define': 'off',
-    'import/no-extraneous-dependencies': [
-      'error',
-      { devDependencies: ['vite-plugin-*.js', 'vite.config.js'], optionalDependencies: false, peerDependencies: false },
-    ],
-    'react/function-component-definition': [
-      2,
-      {
-        namedComponents: 'arrow-function',
-      },
-    ],
-  },
-  settings: {
-    react: {
-      version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
-    },
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.jsx'],
-      },
-    },
+    "no-var": "error",
+    "prefer-const": "error",
+    "prefer-template": "error",
+    "template-curly-spacing": "error",
+    "prefer-arrow-callback": "error",
+    "arrow-spacing": "error",
+    eqeqeq: "error",
+    "prettier/prettier": "error",
   },
 };
