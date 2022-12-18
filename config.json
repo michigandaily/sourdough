@@ -2,19 +2,35 @@
   "hed": "The Michigan Daily",
   "dek": "Description",
   "social_img": "",
-  "deployment": "https://test.michigandaily.com",
   "fetch": [
     {
+      "type": "doc",
       "id": "",
       "output": "",
       "auth": "~/.daily-google-services.json"
     },
     {
+      "type": "sheet",
       "id": "",
       "sheetId": "0",
       "output": "",
       "auth": "~/.daily-google-services.json"
+    },
+    {
+      "type": "json",
+      "id": "",
+      "output": "",
+      "auth": "~/.daily-google-services.json"
     }
   ],
-  "GA_MEASUREMENT_ID": ""
+  "GA_MEASUREMENT_ID": "",
+  "deployment": {
+    "url": "https://test.michigandaily.com",
+    "region": "us-east-2",
+    "distribution": "",
+    "bucket": "test.michigandaily.com",
+    "key": "",
+    "build": "./dist",
+    "profile": "sink"
+  }
 }

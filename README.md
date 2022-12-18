@@ -8,7 +8,8 @@ It has several useful features:
 - [x] MicroCMS with [ArchieML](http://archieml.org/)
 - [x] Data ingest from Google Sheets
 - [x] Bundling with [Vite](https://vitejs.dev/)
-- [ ] Easy deploy to S3 bucket
+- [x] Easy deploy to S3 bucket
+- [x] Easy deploy to GitHub Pages
 
 ## Using this template
 
@@ -40,44 +41,13 @@ That said, you'll probably want to be importing images by using a CDN (e.g. Jetp
 
 ### Fetching from Google Drive
 
-If you haven't already, download our service account credentials file (`.daily-google-services.json`) and put it in the home directory of your computer.
-
-The credentials file will have a `client_email` property. Share your Google Doc or Google Sheet with the value of this property in order to allow permission to fetch.
-
-Our `config.json` file contains a `fetch` property which has an array of objects as the value. Each object represents a file that will be fetched.
-
-An object must have `id`, `output`, and `auth` properties in order to query for a Google Doc. An object must also have a `sheetId` property to query for a Google Sheet.
-
-The `auth` property of each object is the name of the credentials file. Since `auth` is a property of each object instead of the entire configuration file, we are able to fetch files that come from locations that may require different permissions.
-
-You may fetch as few or as many files as you want.
-
-#### Fetching JSON from a Google Doc
-
-Consider the following generalized URL:
-
-`https://docs.google.com/document/d/FILE_ID/edit`
-
-1. In `config.json`, put `FILE_ID` in `id`.
-2. Put a path where the JSON-ified AML should go in `output`. This path should probably be somewhere in `src/graphic`.
-3. Run `yarn sink gdoc` to fetch the specified document.
+Refer to the [Usage](https://github.com/MichiganDaily/sink#usage) section in the `sink` README for instructions on how to set up `config.json` for fetching files from Google Drive.
 
 You can import a JSON file in JS like this:
 
 ```js
 import copy from "../data/data.json";
 ```
-
-#### Fetching a CSV from a Google Sheet
-
-Consider the following generalized URL:
-
-`https://docs.google.com/spreadsheets/d/FILE_ID/edit#gid=SHEET_ID`
-
-1. In `config.json`, put `FILE_ID` in `id`.
-2. Put `SHEET_ID` in `sheetId`.
-3. Put a path where the CSV should go in `output`. This path should probably be somewhere in `src/graphic`.
-4. Run `yarn sink gsheet` to fetch the specified sheet.
 
 You can import a CSV file in JS like this:
 
@@ -86,3 +56,18 @@ import csvfile from "../data/data.csv";
 ```
 
 We use the `@rollup/plugin-dsv` plugin (which relies on [`d3-dsv`](https://github.com/d3/d3-dsv)) to parse the CSV file into a usable array.
+
+### Deploying to AWS S3
+
+Refer to the [AWS S3 deployment with cache invalidation](https://github.com/MichiganDaily/sink/tree/main#aws-s3-deployment-with-cache-invalidation) section in the `sink` README for instructions on how to set up `config.json` for deploying to AWS S3.
+
+1. Make sure that `base` in `vite.config.js` is routed correctly (it should probably be `config.key` prepended by a `/`).
+2. Run `yarn sink deploy aws`.
+
+### Deploying to GitHub Pages
+
+Refer to the [GitHub Pages deployment](https://github.com/MichiganDaily/sink/tree/main#github-pages-deployment) section in the `sink` README for instructions on how to set up `config.json` for deploying to GitHub Pages.
+
+1. Make sure that `base` in `vite.config.js` is routed correctly (it should probably be the repository name prepended with a `/`).
+2. Run `yarn sink deploy github`.
+3. Go to [`Settings > Pages`](../../settings/pages) and check the **Enforce HTTPS** option. All of our sites should enforce HTTPS, so please make sure to double check this!
