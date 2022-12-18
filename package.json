@@ -17,8 +17,8 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@michigandaily/rollup-plugin-dsv": "michigandaily/rollup-plugin-dsv",
     "@michigandaily/vite-plugin-transform-nunjucks": "michigandaily/vite-plugin-transform-nunjucks#v1.0.1",
-    "@rollup/plugin-dsv": "^3.0.1",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react": "3.0.0",
