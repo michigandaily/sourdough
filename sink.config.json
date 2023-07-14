@@ -25,11 +25,11 @@
   ],
   "GA_MEASUREMENT_ID": "",
   "deployment": {
-    "url": "https://test.michigandaily.com/temp/unspecified_key",
+    "url": "https://test.michigandaily.com/tmp/key",
     "region": "us-east-2",
-    "distribution": "",
+    "distribution": null,
     "bucket": "test.michigandaily.com",
-    "key": "temp/unspecified_key",
+    "key": "tmp/key",
     "build": "./dist",
     "profile": "sink"
   }
