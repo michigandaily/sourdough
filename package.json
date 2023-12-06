@@ -31,6 +31,6 @@
 		"prettier": "^3.0.0",
 		"sass": "^1.63.6",
 		"sink": "michigandaily/sink#v2.8.0",
-		"vite": "^4.4.7"
+		"vite": "^4.4.12"
 	}
 }
